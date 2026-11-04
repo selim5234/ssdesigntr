@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="S&S Design - Sauna, jakuzi, mobilya, mutfak, boya, duvar paneli ve iç dış mekân tasarımı. Türkiye geneli hizmet.">
+<title>S&S Design | Interior & Exterior Design</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#11110f;--panel:#1b1a17;--gold:#c6a56a;--white:#f5f1e9;--muted:#b7b1a5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+header{position:absolute;top:0;width:100%;border-bottom:1px solid #ffffff20;z-index:5}
+nav{height:85px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Playfair Display';font-size:24px;letter-spacing:2px}
+.logo small{display:block;color:var(--gold);font:10px 'DM Sans';letter-spacing:3px}
+.links{display:flex;gap:22px;font-size:13px}
+.links a:hover{color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:#17140f;padding:14px 22px;font-weight:700;font-size:12px;border:1px solid var(--gold)}
+.hero{min-height:720px;display:flex;align-items:center;background:linear-gradient(90deg,#10100ff2,#10100f75),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:650px;padding-top:80px}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:11px;text-transform:uppercase}
+h1,h2,h3{font-family:'Playfair Display';font-weight:500}
+h1{font-size:clamp(45px,7vw,78px);line-height:1.08;margin:22px 0}
+.gold{color:var(--gold)}
+.hero p{line-height:1.9;color:#ddd;font-size:16px;max-width:520px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.secondary{background:transparent;color:white}
+section{padding:90px 0}
+.heading{max-width:650px;margin-bottom:40px}
+.heading h2{font-size:43px;margin:15px 0}
+.heading p,.about p{color:var(--muted);line-height:1.9}
+.services{background:#171714}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{padding:25px 20px;background:linear-gradient(145deg,#24221d,#191916);border:1px solid #c6a56a40;min-height:200px}
+.card .icon{font-size:25px;color:var(--gold)}
+.card h3{font-size:21px;margin:22px 0 10px}
+.card p{font-size:13px;color:var(--muted);line-height:1.7}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-img{height:450px;background:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85') center/cover}
+.about h2{font-size:45px;line-height:1.2}
+.projects{background:#171714}
+.project-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:210px 210px;gap:13px}
+.project{position:relative;overflow:hidden}
+.project:first-child{grid-row:span 2}
+.project img{width:100%;height:100%;object-fit:cover;filter:brightness(.75)}
+.project span{position:absolute;bottom:0;left:0;width:100%;padding:35px 15px 15px;background:linear-gradient(transparent,#000c);font-family:'Playfair Display';font-size:19px}
+.banner{background:linear-gradient(100deg,#c6a56a,#e1c58e);color:#17140f;padding:55px 0}
+.banner .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.banner h2{font-size:36px;margin:0 0 10px}
+.banner .btn{background:#17140f;color:white;border-color:#17140f}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact h2{font-size:44px}
+.contact p{color:var(--muted);line-height:1.8}
+.contact-item{padding:17px 0;border-bottom:1px solid #c6a56a40;display:flex;justify-content:space-between;gap:15px;font-size:14px}
+.contact-item span:first-child{color:var(--muted)}
+.form{background:var(--panel);padding:25px;border:1px solid #c6a56a40}
+.form h3{font-size:25px}
+input,select,textarea{width:100%;padding:14px;margin-bottom:12px;background:#11110f;color:white;border:1px solid #555;font:14px 'DM Sans'}
+textarea{min-height:100px}
+.form button{width:100%;cursor:pointer}
+footer{padding:30px 0;border-top:1px solid #c6a56a40;color:#aaa;font-size:12px}
+footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.wa{position:fixed;bottom:20px;right:20px;background:#25d366;color:white;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;font-size:27px;z-index:10}
+@media(max-width:800px){
+.links{display:none}
+.grid{grid-template-columns:repeat(2,1fr)}
+.about,.contact-grid{grid-template-columns:1fr}
+.project-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 150px 150px}
+.project:first-child{grid-row:span 2}
+.banner .wrap{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:500px){
+section{padding:65px 0}
+.hero{min-height:680px}
+h1{font-size:48px}
+.heading h2,.about h2,.contact h2{font-size:36px}
+.actions .btn{width:100%;text-align:center}
+.card{padding:17px 12px;min-height:190px}
+.card h3{font-size:18px}
+.card p{font-size:12px}
+.project-grid{gap:8px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="wrap">
+<a href="#anasayfa" class="logo">S&S DESIGN<small>INTERIOR & EXTERIOR</small></a>
+<div class="links">
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#projeler">Projeler</a>
+<a href="#iletisim">İletişim</a>
+</div>
+<a class="btn" href="https://wa.me/905354688352">TEKLİF AL ↗</a>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="anasayfa">
+<div class="wrap hero-content">
+<div class="eyebrow">Hayalinizdeki mekânlara özel çözümler</div>
+<h1>Yaşam alanlarınıza <span class="gold">değer</span> katıyoruz.</h1>
+<p>Saunadan özel mobilyaya, jakuzi sistemlerinden iç ve dış mekân yenilemeye kadar fikirlerinizi tasarlıyor, hayata geçiriyoruz.</p>
+<div class="actions">
+<a class="btn" href="#hizmetler">HİZMETLERİMİZ</a>
+<a class="btn secondary" href="https://wa.me/905354688352">WHATSAPP'TAN TEKLİF AL ↗</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="hizmetler">
+<div class="wrap">
+<div class="heading">
+<div class="eyebrow">Neler yapıyoruz?</div>
+<h2>Her detayda <span class="gold">özen</span>, her projede kalite.</h2>
+<p>Tasarım ve uygulama çözümlerimizi tek çatı altında sunuyoruz.</p>
+</div>
+<div class="grid">
+<div class="card"><div class="icon">⌂</div><h3>Sauna</h3><p>Özel ölçü sauna tasarımı, ahşap uygulama ve montaj.</p></div>
+<div class="card"><div class="icon">◉</div><h3>Jakuzi</h3><p>Modern jakuzi sistemleri ve banyo uygulamaları.</p></div>
+<div class="card"><div class="icon">▤</div><h3>Mobilya</h3><p>Mutfak, dolap ve özel üretim mobilyalar.</p></div>
+<div class="card"><div class="icon">▥</div><h3>Duvar Paneli</h3><p>Modern duvar kaplama ve dekoratif paneller.</p></div>
+<div class="card"><div class="icon">✧</div><h3>Boya</h3><p>İç mekân boya ve dekorasyon uygulamaları.</p></div>
+<div class="card"><div class="icon">▱</div><h3>Cam Balkon</h3><p>Cam balkon ve duşakabin çözümleri.</p></div>
+<div class="card"><div class="icon">◇</div><h3>Tadilat</h3><p>Yaşam alanları için yenileme çalışmaları.</p></div>
+<div class="card"><div class="icon">✦</div><h3>İç & Dış Tasarım</h3><p>Mekânınıza özel tasarım dokunuşları.</p></div>
+</div>
+</div>
+</section>
+
+<section id="hakkimizda">
+<div class="wrap about">
+<div class="about-img"></div>
+<div>
+<div class="eyebrow">S&S Design</div>
+<h2>Fikirden uygulamaya, <span class="gold">size özel.</span></h2>
+<p>S&S Design olarak sauna, jakuzi, mobilya, dekorasyon ve tadilat alanlarında mekânınıza özel çözümler sunuyoruz.</p>
+<p>Her projede işlevselliği, estetiği ve uygulama kalitesini bir araya getiriyoruz.</p>
+<p>Türkiye geneli hizmet veriyoruz.</p>
+<a class="btn" href="https://wa.me/905354688352">BİZİMLE İLETİŞİME GEÇİN ↗</a>
+</div>
+</div>
+</section>
+
+<section class="projects" id="projeler">
+<div class="wrap">
+<div class="heading">
+<div class="eyebrow">İlham veren detaylar</div>
+<h2>Projelerimizden <span class="gold">seçkiler</span></h2>
+<p>Örnek uygulama görselleri. Kendi projelerimizin fotoğraflarıyla güncelleyebiliriz.</p>
+</div>
+<div class="project-grid">
+<div class="project"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85"><span>Sauna & Spa</span></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85"><span>İç Mekân</span></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=85"><span>Dış Mekân</span></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=85"><span>Mobilya</span></div>
+<div class="project"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85"><span>Özel Tasarım</span></div>
+</div>
+</div>
+</section>
+
+<div class="banner">
+<div class="wrap">
+<div><h2>Projenizi birlikte hayata geçirelim.</h2><p>İhtiyacınızı anlatın, size özel teklif hazırlayalım.</p></div>
+<a class="btn" href="https://wa.me/905354688352">HEMEN TEKLİF AL ↗</a>
+</div>
+</div>
+
+<section class="contact" id="iletisim">
+<div class="wrap contact-grid">
+<div>
+<div class="eyebrow">İletişime geçin</div>
+<h2>Bir sonraki projeniz <span class="gold">burada</span> başlasın.</h2>
+<p>Projeniz, ölçüleriniz veya aklınızdaki fikir için bize ulaşın.</p>
+<div class="contact-item"><span>Telefon / WhatsApp</span><a href="tel:+905354688352">0535 468 83 52</a></div>
+<div class="contact-item"><span>Instagram</span><a href="https://instagram.com/s.sdesign.tr">@s.sdesign.tr ↗</a></div>
+<div class="contact-item"><span>Hizmet bölgesi</span><span>Türkiye geneli</span></div>
+<div class="contact-item"><span>Web</span><span>ssdesigntr.com</span></div>
+</div>
+
+<form class="form" id="quoteForm">
+<h3>Ücretsiz teklif isteyin</h3>
+<input id="name" required placeholder="Adınız Soyadınız">
+<input id="phone" placeholder="Telefon numaranız">
+<select id="service" required>
+<option value="">İlgilendiğiniz hizmet</option>
+<option>Sauna</option><option>Jakuzi</option><option>Mobilya / Mutfak</option><option>Duvar Paneli</option><option>Boya</option><option>Cam Balkon</option><option>Tadilat</option><option>İç & Dış Tasarım</option>
+</select>
+<textarea id="detail" placeholder="Projenizi anlatın"></textarea>
+<button class="btn" type="submit">WHATSAPP'TAN TEKLİF İSTE ↗</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>S&S DESIGN</strong>
+<span>Wood Interior & Exterior Design</span>
+<span>© 2026 S&S Design. Tüm hakları saklıdır.</span>
+</div>
+</footer>
+
+<a class="wa" href="https://wa.me/905354688352">✆</a>
+
+<script>
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+e.preventDefault();
+let n=document.getElementById('name').value;
+let p=document.getElementById('phone').value;
+let s=document.getElementById('service').value;
+let d=document.getElementById('detail').value;
+let msg=`Merhaba, S&S Design üzerinden teklif almak istiyorum.\nAd: ${n}\nTelefon: ${p}\nHizmet: ${s}\nDetay: ${d}`;
+window.open('https://wa.me/905354688352?text='+encodeURIComponent(msg),'_blank');
+});
+</script>
+</body>
+</html>
