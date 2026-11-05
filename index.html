@@ -2,247 +2,648 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="S&S Design; sauna, jakuzi, cam balkon, duşakabin, özel mobilya, mutfak tasarımı, boya ve tadilat hizmetleri sunar. İç ve dış mekân tasarımında Türkiye genelinde hizmet verir.">
-<title>S&S Design | Sauna, Jakuzi, Cam Balkon ve Tadilat</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>S&S Design | Sauna, Mobilya ve İç Mimari</title>
+
+<meta name="description" content="S&S Design. Sauna, jakuzi, mobilya, mutfak, cam balkon, duşakabin ve özel tasarım projelerinde profesyonel çözümler.">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#11110f;--panel:#1b1a17;--gold:#c6a56a;--white:#f5f1e9;--muted:#b7b1a5}
-*{box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
+
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif}
-a{text-decoration:none;color:inherit}
-.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-header{position:absolute;top:0;width:100%;border-bottom:1px solid #ffffff20;z-index:5}
-nav{height:85px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Playfair Display';font-size:24px;letter-spacing:2px}
-.logo small{display:block;color:var(--gold);font:10px 'DM Sans';letter-spacing:3px}
-.links{display:flex;gap:22px;font-size:13px}
-.links a:hover{color:var(--gold)}
-.btn{display:inline-block;background:var(--gold);color:#17140f;padding:14px 22px;font-weight:700;font-size:12px;border:1px solid var(--gold)}
-.hero{min-height:720px;display:flex;align-items:center;background:linear-gradient(90deg,#10100ff2,#10100f75),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-content{max-width:650px;padding-top:80px}
-.eyebrow{color:var(--gold);letter-spacing:3px;font-size:11px;text-transform:uppercase}
-h1,h2,h3{font-family:'Playfair Display';font-weight:500}
-h1{font-size:clamp(45px,7vw,78px);line-height:1.08;margin:22px 0}
-.gold{color:var(--gold)}
-.hero p{line-height:1.9;color:#ddd;font-size:16px;max-width:520px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.secondary{background:transparent;color:white}
-section{padding:90px 0}
-.heading{max-width:650px;margin-bottom:40px}
-.heading h2{font-size:43px;margin:15px 0}
-.heading p,.about p{color:var(--muted);line-height:1.9}
-.services{background:#171714}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.card{padding:25px 20px;background:linear-gradient(145deg,#24221d,#191916);border:1px solid #c6a56a40;min-height:200px}
-.card .icon{font-size:25px;color:var(--gold)}
-.card h3{font-size:21px;margin:22px 0 10px}
-.card p{font-size:13px;color:var(--muted);line-height:1.7}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.about-img{height:450px;background:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85') center/cover}
-.about h2{font-size:45px;line-height:1.2}
-.projects{background:#171714}
-.project-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:210px 210px;gap:13px}
-.project{position:relative;overflow:hidden}
-.project:first-child{grid-row:span 2}
-.project img{width:100%;height:100%;object-fit:cover;filter:brightness(.75)}
-.project span{position:absolute;bottom:0;left:0;width:100%;padding:35px 15px 15px;background:linear-gradient(transparent,#000c);font-family:'Playfair Display';font-size:19px}
-.banner{background:linear-gradient(100deg,#c6a56a,#e1c58e);color:#17140f;padding:55px 0}
-.banner .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.banner h2{font-size:36px;margin:0 0 10px}
-.banner .btn{background:#17140f;color:white;border-color:#17140f}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
-.contact h2{font-size:44px}
-.contact p{color:var(--muted);line-height:1.8}
-.contact-item{padding:17px 0;border-bottom:1px solid #c6a56a40;display:flex;justify-content:space-between;gap:15px;font-size:14px}
-.contact-item span:first-child{color:var(--muted)}
-.form{background:var(--panel);padding:25px;border:1px solid #c6a56a40}
-.form h3{font-size:25px}
-input,select,textarea{width:100%;padding:14px;margin-bottom:12px;background:#11110f;color:white;border:1px solid #555;font:14px 'DM Sans'}
-textarea{min-height:100px}
-.form button{width:100%;cursor:pointer}
-footer{padding:30px 0;border-top:1px solid #c6a56a40;color:#aaa;font-size:12px}
-footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.wa{position:fixed;bottom:20px;right:20px;background:#25d366;color:white;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;font-size:27px;z-index:10}
-@media(max-width:800px){
-.links{display:none}
-.grid{grid-template-columns:repeat(2,1fr)}
-.about,.contact-grid{grid-template-columns:1fr}
-.project-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 150px 150px}
-.project:first-child{grid-row:span 2}
-.banner .wrap{flex-direction:column;align-items:flex-start}
+
+body{
+font-family:Montserrat,sans-serif;
+background:#101010;
+color:#fff;
 }
+
+:root{
+--gold:#c6a45b;
+--black:#101010;
+--gray:#1c1c1c;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+background:#101010;
+border-bottom:1px solid #292929;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav{
+min-height:85px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:65px;
+height:65px;
+object-fit:contain;
+}
+
+.logo span{
+font-size:24px;
+font-weight:800;
+color:var(--gold);
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+}
+
+nav a:hover{color:var(--gold)}
+
+.hero{
+min-height:620px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35)),
+url('sauna.jpg.PNG') center/cover;
+}
+
+.hero-content{
+max-width:700px;
+padding:80px 0;
+}
+
+.hero small{
+color:var(--gold);
+letter-spacing:4px;
+font-weight:700;
+}
+
+.hero h1{
+font-size:54px;
+line-height:1.2;
+margin:25px 0;
+}
+
+.hero h1 span{color:var(--gold)}
+
+.hero p{
+font-size:16px;
+line-height:1.9;
+color:#ddd;
+max-width:600px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 27px;
+margin-top:30px;
+background:var(--gold);
+color:#111;
+text-decoration:none;
+font-weight:800;
+border-radius:3px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#fff;
+transform:translateY(-3px);
+}
+
+section{padding:90px 0}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title small{
+color:var(--gold);
+letter-spacing:3px;
+font-weight:700;
+}
+
+.section-title h2{
+font-size:36px;
+margin-top:15px;
+}
+
+.section-title p{
+color:#aaa;
+margin-top:15px;
+line-height:1.8;
+}
+
+.services{
+background:#151515;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:#202020;
+overflow:hidden;
+border:1px solid #303030;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-7px);
+border-color:var(--gold);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+display:block;
+}
+
+.card-content{
+padding:23px;
+}
+
+.card h3{
+font-size:19px;
+color:var(--gold);
+margin-bottom:12px;
+}
+
+.card p{
+font-size:13px;
+color:#bbb;
+line-height:1.8;
+}
+
+.about{
+background:#101010;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+max-height:450px;
+object-fit:cover;
+}
+
+.about h2{
+font-size:36px;
+margin-bottom:25px;
+}
+
+.about h2 span{color:var(--gold)}
+
+.about p{
+color:#bbb;
+line-height:2;
+font-size:14px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:40px;
+}
+
+.feature{
+background:#202020;
+padding:25px 10px;
+text-align:center;
+border-bottom:2px solid var(--gold);
+}
+
+.feature strong{
+display:block;
+color:var(--gold);
+font-size:16px;
+margin-bottom:8px;
+}
+
+.feature span{
+font-size:12px;
+color:#bbb;
+}
+
+.gallery{
+background:#181818;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.gallery-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+transition:.3s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.02);
+}
+
+.contact{
+background:
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9)),
+url('Mobilya.jpg.PNG') center/cover;
+text-align:center;
+}
+
+.contact h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.contact h2 span{color:var(--gold)}
+
+.contact p{
+color:#ccc;
+line-height:2;
+}
+
+footer{
+background:#080808;
+padding:40px 0;
+text-align:center;
+border-top:1px solid #292929;
+}
+
+footer h3{
+color:var(--gold);
+font-size:24px;
+margin-bottom:15px;
+}
+
+footer p{
+font-size:12px;
+color:#888;
+line-height:2;
+}
+
+footer a{
+color:var(--gold);
+text-decoration:none;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:22px;
+z-index:2000;
+background:#20bd5a;
+color:#fff;
+padding:15px 20px;
+border-radius:40px;
+text-decoration:none;
+font-size:14px;
+font-weight:700;
+box-shadow:0 4px 20px #0008;
+}
+
+@media(max-width:850px){
+
+.nav{
+flex-wrap:wrap;
+padding:12px 0;
+}
+
+nav{
+width:100%;
+overflow-x:auto;
+padding:12px 0;
+gap:20px;
+}
+
+nav a{white-space:nowrap}
+
+.hero{min-height:550px}
+
+.hero h1{font-size:38px}
+
+.grid{grid-template-columns:repeat(2,1fr)}
+
+.about-grid{grid-template-columns:1fr}
+
+.gallery-grid{grid-template-columns:repeat(2,1fr)}
+
+.features{grid-template-columns:repeat(2,1fr)}
+
+}
+
 @media(max-width:500px){
-section{padding:65px 0}
-.hero{min-height:680px}
-h1{font-size:48px}
-.heading h2,.about h2,.contact h2{font-size:36px}
-.actions .btn{width:100%;text-align:center}
-.card{padding:17px 12px;min-height:190px}
-.card h3{font-size:18px}
-.card p{font-size:12px}
-.project-grid{gap:8px}
+
+.hero h1{font-size:34px}
+
+.grid{grid-template-columns:1fr}
+
+.gallery-grid{grid-template-columns:1fr}
+
+.card img{height:260px}
+
+.section-title h2{font-size:28px}
+
+.contact h2{font-size:29px}
+
+.logo span{font-size:21px}
+
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<nav class="wrap">
-<a href="#anasayfa" class="logo">S&S DESIGN<small>INTERIOR & EXTERIOR</small></a>
-<div class="links">
+<div class="container nav">
+
+<div class="logo">
+<img src="Logo.png.PNG" alt="S&S Design Logo">
+<span>S&S DESIGN</span>
+</div>
+
+<nav>
 <a href="#anasayfa">Ana Sayfa</a>
-<a href="#hizmetler">Hizmetler</a>
+<a href="#hizmetler">Hizmetlerimiz</a>
 <a href="#hakkimizda">Hakkımızda</a>
 <a href="#projeler">Projeler</a>
 <a href="#iletisim">İletişim</a>
-</div>
-<a class="btn" href="https://wa.me/905354688352">TEKLİF AL ↗</a>
 </nav>
+
+</div>
 </header>
 
-<main>
-<section class="hero" id="anasayfa">
-<div class="wrap hero-content">
-<div class="eyebrow">Hayalinizdeki mekânlara özel çözümler</div>
-<h1>Yaşam alanlarınıza <span class="gold">değer</span> katıyoruz.</h1>
-<p>Saunadan özel mobilyaya, jakuzi sistemlerinden iç ve dış mekân yenilemeye kadar fikirlerinizi tasarlıyor, hayata geçiriyoruz.</p>
-<div class="actions">
-<a class="btn" href="#hizmetler">HİZMETLERİMİZ</a>
-<a class="btn secondary" href="https://wa.me/905354688352">WHATSAPP'TAN TEKLİF AL ↗</a>
+<div class="hero" id="anasayfa">
+<div class="container hero-content">
+
+<small>WOOD • INTERIOR • EXTERIOR DESIGN</small>
+
+<h1>
+Hayalinizdeki<br>
+Mekânları <span>Birlikte</span><br>
+Tasarlayalım.
+</h1>
+
+<p>
+Sauna, mobilya, iç ve dış mimari tasarım,
+cam balkon ve özel uygulamalarla
+yaşam alanlarınıza değer katıyoruz.
+</p>
+
+<a href="#hizmetler" class="btn">HİZMETLERİMİZİ KEŞFEDİN</a>
+
 </div>
 </div>
-</section>
 
 <section class="services" id="hizmetler">
-<div class="wrap">
-<div class="heading">
-<div class="eyebrow">Neler yapıyoruz?</div>
-<h2>Her detayda <span class="gold">özen</span>, her projede kalite.</h2>
-<p>Tasarım ve uygulama çözümlerimizi tek çatı altında sunuyoruz.</p>
+
+<div class="container">
+
+<div class="section-title">
+<small>S&S DESIGN</small>
+<h2>Hizmetlerimiz</h2>
+<p>Her detayda kalite, her projede özgün tasarım.</p>
 </div>
+
 <div class="grid">
-<div class="card"><div class="icon">⌂</div><h3>Sauna</h3><p>Özel ölçü sauna tasarımı, ahşap uygulama ve montaj.</p></div>
-<div class="card"><div class="icon">◉</div><h3>Jakuzi</h3><p>Modern jakuzi sistemleri ve banyo uygulamaları.</p></div>
-<div class="card"><div class="icon">▤</div><h3>Mobilya</h3><p>Mutfak, dolap ve özel üretim mobilyalar.</p></div>
-<div class="card"><div class="icon">▥</div><h3>Duvar Paneli</h3><p>Modern duvar kaplama ve dekoratif paneller.</p></div>
-<div class="card"><div class="icon">✧</div><h3>Boya</h3><p>İç mekân boya ve dekorasyon uygulamaları.</p></div>
-<div class="card"><div class="icon">▱</div><h3>Cam Balkon</h3><p>Cam balkon ve duşakabin çözümleri.</p></div>
-<div class="card"><div class="icon">◇</div><h3>Tadilat</h3><p>Yaşam alanları için yenileme çalışmaları.</p></div>
-<div class="card"><div class="icon">✦</div><h3>İç & Dış Tasarım</h3><p>Mekânınıza özel tasarım dokunuşları.</p></div>
+
+<div class="card">
+<img src="sauna.jpg.PNG" alt="Sauna">
+<div class="card-content">
+<h3>Sauna Tasarımı</h3>
+<p>Özel ölçü, kaliteli ahşap ve profesyonel sauna uygulamaları.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Mobilya.jpg.PNG" alt="Mobilya">
+<div class="card-content">
+<h3>Özel Mobilya</h3>
+<p>Yaşam alanlarınıza özel ölçü ve tasarımla mobilya çözümleri.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Mutfak.jpg.PNG" alt="Mutfak">
+<div class="card-content">
+<h3>Mutfak Tasarımı</h3>
+<p>Modern, kullanışlı ve estetik mutfak uygulamaları.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Dis-mekan.jpg.PNG" alt="Dış mekan">
+<div class="card-content">
+<h3>Dış Mekân Tasarımı</h3>
+<p>Bahçe, teras ve dış yaşam alanları için özel çözümler.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Cam-balkon.jpg.PNG" alt="Cam balkon">
+<div class="card-content">
+<h3>Cam Balkon</h3>
+<p>Estetik, kullanışlı ve kaliteli cam balkon sistemleri.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Dusakabin.jpg.PNG" alt="Duşakabin">
+<div class="card-content">
+<h3>Duşakabin</h3>
+<p>Banyolarınıza modern ve şık dokunuşlar.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Jakuzi.jpg.PNG" alt="Jakuzi">
+<div class="card-content">
+<h3>Jakuzi Sistemleri</h3>
+<p>Konfor ve rahatlığı yaşam alanlarınıza taşıyoruz.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="boya.jpg.PNG" alt="Boya">
+<div class="card-content">
+<h3>Boya ve Dekorasyon</h3>
+<p>Profesyonel boya ve dekorasyon uygulamaları.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Ozel-tasarim.jpg.PNG" alt="Özel tasarım">
+<div class="card-content">
+<h3>Özel Tasarım</h3>
+<p>İhtiyaçlarınıza özel, özgün ve profesyonel projeler.</p>
+</div>
+</div>
+
 </div>
 </div>
 </section>
 
-<section id="hakkimizda">
-<div class="wrap about">
-<div class="about-img"></div>
+<section class="about" id="hakkimizda">
+
+<div class="container about-grid">
+
+<img src="ic-mekan.jpg.PNG" alt="İç mekan tasarımı">
+
 <div>
-<div class="eyebrow">S&S Design</div>
-<h2>Fikirden uygulamaya, <span class="gold">size özel.</span></h2>
-<p>S&S Design olarak sauna, jakuzi, mobilya, dekorasyon ve tadilat alanlarında mekânınıza özel çözümler sunuyoruz.</p>
-<p>Her projede işlevselliği, estetiği ve uygulama kalitesini bir araya getiriyoruz.</p>
-<p>Türkiye geneli hizmet veriyoruz.</p>
-<a class="btn" href="https://wa.me/905354688352">BİZİMLE İLETİŞİME GEÇİN ↗</a>
+<small style="color:#c6a45b;letter-spacing:3px">BİZ KİMİZ?</small>
+
+<h2>
+Tasarımdan<br>
+Uygulamaya <span>Kalite.</span>
+</h2>
+
+<p>
+S&S Design olarak sauna, mobilya, iç ve dış mekân
+tasarımı ve dekorasyon alanlarında özgün çözümler
+sunuyoruz.
+<br><br>
+Her projede kaliteli malzeme, titiz işçilik ve
+müşteri memnuniyetini ön planda tutuyoruz.
+Hayal ettiğiniz yaşam alanlarını gerçeğe dönüştürüyoruz.
+</p>
+
+<a href="#iletisim" class="btn">BİZE ULAŞIN</a>
+
 </div>
+
 </div>
+
+<div class="container features">
+
+<div class="feature">
+<strong>ÖZEL TASARIM</strong>
+<span>Size özel çözümler</span>
+</div>
+
+<div class="feature">
+<strong>KALİTELİ İŞÇİLİK</strong>
+<span>Detaylarda kalite</span>
+</div>
+
+<div class="feature">
+<strong>PROFESYONEL EKİP</strong>
+<span>Titiz uygulama</span>
+</div>
+
+<div class="feature">
+<strong>TÜRKİYE GENELİ</strong>
+<span>Hizmet ağı</span>
+</div>
+
+</div>
+
 </section>
 
-<section class="projects" id="projeler">
-<div class="wrap">
-<div class="heading">
-<div class="eyebrow">İlham veren detaylar</div>
-<h2>Projelerimizden <span class="gold">seçkiler</span></h2>
-<p>Örnek uygulama görselleri. Kendi projelerimizin fotoğraflarıyla güncelleyebiliriz.</p>
+<section class="gallery" id="projeler">
+
+<div class="container">
+
+<div class="section-title">
+<small>GERÇEK UYGULAMALAR</small>
+<h2>Projelerimiz</h2>
+<p>Kalitemizi yaptığımız işlerle gösteriyoruz.</p>
 </div>
-<div class="project-grid">
-<div class="project"><img alt="Sauna ve spa uygulaması" src="sauna.jpg.PNG"><span>Sauna & Spa</span></div>
-<div class="project"><img alt="İç mekân dekorasyon ve tadilat"  src="%C4%B0%C3%A7%20mekan.PNG"><span>İç Mekân</span></div>
-<div class="project">
 
-
-
-<img alt="Dış mekân tasarım ve uygulama" src="D%C4%B1%C5%9F%20mekan.PNG"><span>Dış Mekân</span></div>
-<div class="project">
-
-
-
-<img alt="Özel mobilya imalatı"  src="Mobilya.PNG"><span>Mobilya</span></div>
-<div class="project"><img alt="Özel tasarım ve dekorasyon"  src="%C3%96zel%20tasar%C4%B1m.PNG"><span>Özel Tasarım</span></div>
+<div class="gallery-grid">
+<img src="sauna.jpg.PNG" alt="Sauna projesi">
+<img src="Mobilya.jpg.PNG" alt="Mobilya projesi">
+<img src="ic-mekan.jpg.PNG" alt="İç mekan projesi">
+<img src="Dis-mekan.jpg.PNG" alt="Dış mekan projesi">
+<img src="Mutfak.jpg.PNG" alt="Mutfak projesi">
+<img src="Jakuzi.jpg.PNG" alt="Jakuzi projesi">
+<img src="Cam-balkon.jpg.PNG" alt="Cam balkon projesi">
+<img src="Dusakabin.jpg.PNG" alt="Duşakabin projesi">
+<img src="Ozel-tasarim.jpg.PNG" alt="Özel tasarım projesi">
 </div>
+
 </div>
 </section>
-
-<div class="banner">
-<div class="wrap">
-<div><h2>Projenizi birlikte hayata geçirelim.</h2><p>İhtiyacınızı anlatın, size özel teklif hazırlayalım.</p></div>
-<a class="btn" href="https://wa.me/905354688352">HEMEN TEKLİF AL ↗</a>
-</div>
-</div>
 
 <section class="contact" id="iletisim">
-<div class="wrap contact-grid">
-<div>
-<div class="eyebrow">İletişime geçin</div>
-<h2>Bir sonraki projeniz <span class="gold">burada</span> başlasın.</h2>
-<p>Projeniz, ölçüleriniz veya aklınızdaki fikir için bize ulaşın.</p>
-<div class="contact-item"><span>Telefon / WhatsApp</span><a href="tel:+905354688352">0535 468 83 52</a></div>
-<div class="contact-item"><span>Instagram</span><a href="https://instagram.com/s.sdesign.tr">@s.sdesign.tr ↗</a></div>
-<div class="contact-item"><span>Hizmet bölgesi</span><span>Türkiye geneli</span></div>
-<div class="contact-item"><span>Web</span><span>ssdesigntr.com</span></div>
-</div>
 
-<form class="form" id="quoteForm">
-<h3>Ücretsiz teklif isteyin</h3>
-<input id="name" required placeholder="Adınız Soyadınız">
-<input id="phone" placeholder="Telefon numaranız">
-<select id="service" required>
-<option value="">İlgilendiğiniz hizmet</option>
-<option>Sauna</option><option>Jakuzi</option><option>Mobilya / Mutfak</option><option>Duvar Paneli</option><option>Boya</option><option>Cam Balkon</option><option>Tadilat</option><option>İç & Dış Tasarım</option>
-</select>
-<textarea id="detail" placeholder="Projenizi anlatın"></textarea>
-<button class="btn" type="submit">WHATSAPP'TAN TEKLİF İSTE ↗</button>
-</form>
+<div class="container">
+
+<small style="color:#c6a45b;letter-spacing:3px">HAYALİNİZİ BİRLİKTE GERÇEKLEŞTİRELİM</small>
+
+<h2>Projeniz İçin <span>Bize Ulaşın</span></h2>
+
+<p>
+Yeni projeniz, özel tasarım talepleriniz ve fiyat teklifi
+için bizimle iletişime geçin.
+<br>
+S&S Design kalitesiyle tanışın.
+</p>
+
+<a href="https://wa.me/905354688352" class="btn">
+WHATSAPP İLE TEKLİF ALIN
+</a> 
+<a href="https://www.instagram.com/s.sdesign.tr/" class="btn" target="_blank">
+INSTAGRAM'DA BİZİ TAKİP EDİN
+</a>
 </div>
 </section>
-</main>
-<section id="hizmetlerimiz">
-  <div class="wrap">
-    <h2>Sauna, Cam Balkon, Jakuzi ve Dekorasyon Hizmetleri</h2>
-    <p>
-      S&S Design olarak sauna yapımı, özel tasarım jakuzi sistemleri,
-      cam balkon uygulamaları, özel mobilya imalatı, mutfak mobilyası,
-      duşakabin, duvar paneli, boya ve iç dış mekân tadilat hizmetleri
-      sunuyoruz.
-    </p>
-    <p>
-      Hayalinizdeki yaşam alanlarını kaliteli malzemeler ve profesyonel
-      işçilikle tasarlıyor, projelerinizi anahtar teslim hayata geçiriyoruz.
-      Türkiye genelinde hizmet veriyoruz.
-    </p>
-  </div>
-</section>
+
 <footer>
-<div class="wrap">
-<strong>S&S DESIGN</strong>
-<span>Wood Interior & Exterior Design</span>
-<span>© 2026 S&S Design. Tüm hakları saklıdır.</span>
+<div class="container">
+
+<h3>S&S DESIGN</h3>
+
+<p>
+WOOD • INTERIOR • EXTERIOR DESIGN
+<br>
+Sauna | Mobilya | İç Mimari | Dış Mekân
+<br><br>
+Türkiye Geneli Hizmet
+<br><br>
+© 2026 S&S Design. Tüm hakları saklıdır.
+</p>
+
 </div>
 </footer>
 
-<a class="wa" href="https://wa.me/905354688352">✆</a>
+<a class="whatsapp" href=https://wa.me/905354688352>
+WhatsApp'tan Ulaşın
+</a>
 
-<script>
-document.getElementById('quoteForm').addEventListener('submit',function(e){
-e.preventDefault();
-let n=document.getElementById('name').value;
-let p=document.getElementById('phone').value;
-let s=document.getElementById('service').value;
-let d=document.getElementById('detail').value;
-let msg=`Merhaba, S&S Design üzerinden teklif almak istiyorum.\nAd: ${n}\nTelefon: ${p}\nHizmet: ${s}\nDetay: ${d}`;
-window.open('https://wa.me/905354688352?text='+encodeURIComponent(msg),'_blank');
-});
-</script>
 </body>
 </html>
